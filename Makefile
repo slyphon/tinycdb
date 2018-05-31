@@ -7,7 +7,7 @@
 
 VERSION = 0.77
 
-prefix=/usr/local
+prefix=@__PREFIX__@
 exec_prefix=$(prefix)
 bindir=$(exec_prefix)/bin
 libdir=$(exec_prefix)/lib
@@ -18,8 +18,8 @@ mandir=$(prefix)/man
 NSSCDB_DIR = $(sysconfdir)
 DESTDIR=
 
-CC = cc
-CFLAGS = -O
+CC = gcc
+CFLAGS = -Og -ggdb3
 
 AR = ar
 ARFLAGS = rv
